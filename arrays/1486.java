@@ -7,6 +7,6 @@ class Solution
     {
       xor = xor ^ (start+ 2*i);
     }
-    return xor;
+    return xor; //hello
   }
 }
