@@ -15,8 +15,7 @@
 //   }
 // }
 class Solution {
-    public int findNumbers(int[] nums) {
-
+    public int findNumbers(int[] nums) 
         int n = nums.length;
         int res_count =0;
 
