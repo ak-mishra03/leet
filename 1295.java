@@ -21,7 +21,6 @@ class Solution {
 
         for(int i=0;i<n;i++)
         { 
-
             int count =0;
             int temp = nums[i];
             while(temp > 0)
