@@ -1,21 +1,11 @@
 class Solution {
 public:
-    int sum(vector<int>&nums, int i, int j)
-    {
-      int maxSum = INT_MIN;
-      int current_Sum = 0;
-
-      for( int i = 0;i<nums.size();i++)
-      {
-        current_Sum+= nums[i];
-
-        if(current_Sum>maxSum)
-          maxSum=current_Sum;
-        else if (current_Sum<0) 
-        {
-          current_Sum=0;
-        }
-        return maxSum;
-      }
+  int maxSubArray(vector<int> &nums) {
+    int max_so_far = nums[0], max_ending_here = nums[0];
+    for (int i = 0; i < nums.size(); i++) {
+      max_ending_here = max(nums[i], max_ending_here + nums[i]);
+      max_so_far = max(max_ending_here, max_so_far);
     }
+    return max_so_far;
+  }
 };
